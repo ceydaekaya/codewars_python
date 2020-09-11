@@ -3,19 +3,12 @@
 ---
 
 def array_diff(a, b):
-    
-    result = []
-    i = 0;
-    j = 0;
-    
-    if (a[i] == b[j]):
-            a = a.remove(a[i]) #append() method in python adds a single item to the existing list
-            
-            if i<len(a):
-                i+=1;
-            return a;
-            if j<len(b):
-                i+=1;
-            else return a;
+   
+def array_diff(a, b):
+    a=set(a)
+    for v in b:
+        if v in a:
+           a.remove(v)
+    return list(a)
 
 
