@@ -2,6 +2,8 @@
 #This code takes a string and return a new string with all vowels removed.
 ---
 
+*Code wars version*
+
 ```
 def disemvowel(string):
     string = string.replace("a","")
@@ -15,4 +17,19 @@ def disemvowel(string):
     string = string.replace("E","")
     string = string.replace("A","")
     return string
+```
+
+*Python 3.5.8 Shell*
+
+```
+def disemvowel(s):
+    for i in "aeiouAEIOU":
+        s = s.replace(i,'')
+    return s
+
+test = ["Remove the vowels",
+         "Rmv th vwls"
+         ]
+
+assert disemvowel(test[0])==test[1]
 ```
