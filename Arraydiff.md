@@ -4,10 +4,6 @@
 
 ```
 def array_diff(a, b):
-    a=set(a)
-    for v in b:
-        if v in a:
-           a.remove(v)
-    return list(a)
+    return [i for i in a if i not in b]
 ```
 
