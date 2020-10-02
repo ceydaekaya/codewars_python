@@ -1,0 +1,8 @@
+# ['a','b','c','d','f'] -> 'e' ['O','Q','R','S'] -> 'P'
+
+import string
+def find_missing_letter(chars):
+    alphabet = string.ascii_lowercase if chars[0] >= 'a' else string.ascii_uppercase
+    for letter in alphabet[alphabet.index(chars[0]):]:
+        if letter not in chars:
+            return letter[0]
